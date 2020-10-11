@@ -7,7 +7,18 @@ import sass from 'rollup-plugin-sass';
 export default [
   {
     input: 'components/index.js',
-    external: ['react', 'prop-types', 'sass', 'classnames'],
+    external: [
+      'react',
+      'react-dom',
+      'prop-types',
+      'sass',
+      'classnames',
+      'carbon-components',
+      'carbon-components-react',
+      'carbon-icons',
+      'lodash',
+      'prism-react-renderer',
+    ],
     output: [
       {
         file: 'index.js',
@@ -20,7 +31,7 @@ export default [
     ],
     plugins: [ 
       babel({
-        exclude: 'node_modules/**, stories/**',
+        exclude: '/node_modules/',
       }),
       json(),
       resolve(),
