@@ -10,7 +10,7 @@ No projeto existem 3 componentes básicos para documentação:
 
 ### CodeBlock
 É um componente para a exibição de códigos JSX. Para utiliá-lo basta importar ele no arquivo desejado e utilizar a props children passando uma string com o código desejado.
-`<CodeBlock children={`código JSX aqui`} />`
+`<CodeBlock children={'código JSX aqui'} />`
 
 ### CSSTable
 É um componente casca para uma tabela de dados. Sua função é documentar as classes de estilo para reescrita no código, caso necessário. Para utiliálo, basta enviar uma lista de objetos com o seguinte formato:
