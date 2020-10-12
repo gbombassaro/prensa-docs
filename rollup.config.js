@@ -9,7 +9,6 @@ export default [
     input: 'components/index.js',
     external: [
       'react',
-      'react-dom',
       'prop-types',
       'sass',
       'classnames',
