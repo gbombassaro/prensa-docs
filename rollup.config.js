@@ -11,10 +11,6 @@ export default [
       'react',
       'prop-types',
       'sass',
-      'classnames',
-      'carbon-components',
-      'carbon-components-react',
-      'carbon-icons',
       'lodash',
     ],
     output: [

@@ -4,7 +4,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
 var PropTypes = require('prop-types');
-var carbonComponentsReact = require('carbon-components-react');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -3778,54 +3777,19 @@ CodeBlock.propTypes = {
   children: PropTypes__default['default'].string
 };
 
-var CSSTable = function CSSTable(_ref) {
-  var rows = _ref.rows,
-      headers = _ref.headers;
-  return /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.DataTable, {
-    rows: rows,
-    headers: headers
-  }, function (_ref2) {
-    var rows = _ref2.rows,
-        headers = _ref2.headers,
-        getTableProps = _ref2.getTableProps,
-        getHeaderProps = _ref2.getHeaderProps,
-        getRowProps = _ref2.getRowProps;
-    return /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.Table, getTableProps(), /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.TableHead, null, /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.TableRow, null, headers.map(function (header) {
-      return /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.TableHeader, getHeaderProps({
-        header: header
-      }), header.header);
-    }))), /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.TableBody, null, rows.map(function (row) {
-      return /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.TableRow, getRowProps({
-        row: row
-      }), row.cells.map(function (cell) {
-        return /*#__PURE__*/React__default['default'].createElement(carbonComponentsReact.TableCell, {
-          key: cell.id
-        }, cell.value);
-      }));
-    })));
+var Space = function Space(_ref) {
+  var size = _ref.size;
+  var unit = 8;
+  return /*#__PURE__*/React__default['default'].createElement("div", {
+    style: {
+      marginTop: size * unit
+    }
   });
 };
 
-CSSTable.propTypes = {
-  rows: PropTypes__default['default'].arrayOf(PropTypes__default['default'].shape({
-    id: PropTypes__default['default'].string,
-    "class": PropTypes__default['default'].string,
-    tokens: PropTypes__default['default'].string
-  })),
-  headers: PropTypes__default['default'].arrayOf(PropTypes__default['default'].shape({
-    key: PropTypes__default['default'].string,
-    header: PropTypes__default['default'].string
-  }))
-};
-CSSTable.defaultProps = {
-  headers: [{
-    key: 'class',
-    header: 'ClassName'
-  }, {
-    key: 'tokens',
-    header: 'Tokens'
-  }]
+Space.propTypes = {
+  size: PropTypes__default['default'].number
 };
 
-exports.CSSTable = CSSTable;
 exports.CodeBlock = CodeBlock;
+exports.Space = Space;

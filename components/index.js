@@ -1,2 +1,3 @@
 export {default as CodeBlock} from './CodeBlock';
-export {default as CSSTable} from './CSSTable';
+export {default as Space} from './Space';
+// export {default as CSSTable} from './CSSTable';
