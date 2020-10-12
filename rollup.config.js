@@ -16,7 +16,6 @@ export default [
       'carbon-components-react',
       'carbon-icons',
       'lodash',
-      'prism-react-renderer',
     ],
     output: [
       {
