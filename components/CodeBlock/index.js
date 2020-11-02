@@ -25,7 +25,8 @@ const CodeBlock = ({ children, language }) => {
 };
 
 CodeBlock.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.string,
+  language: PropTypes.string,
 }
 
 CodeBlock.defaultProps = {
