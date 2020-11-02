@@ -3,9 +3,9 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import theme from 'prism-react-renderer/themes/nightOwl';
 import PropTypes from 'prop-types';
 
-const CodeBlock = ({ children }) => {
+const CodeBlock = ({ children, language }) => {
   return (
-    <Highlight {...defaultProps} theme={theme} code={children} language="jsx">
+    <Highlight {...defaultProps} theme={theme} code={children} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={{ ...style, padding: '20px', fontSize: '15px', overflowY: 'auto' }}>
           {tokens.map((line, i) => (
@@ -26,6 +26,10 @@ const CodeBlock = ({ children }) => {
 
 CodeBlock.propTypes = {
   children: PropTypes.string
+}
+
+CodeBlock.defaultProps = {
+  language: 'jsx'
 }
 
 export default CodeBlock;
