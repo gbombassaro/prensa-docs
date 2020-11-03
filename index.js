@@ -3728,11 +3728,12 @@ var theme$1 = {
 };
 
 var CodeBlock = function CodeBlock(_ref) {
-  var children = _ref.children;
+  var children = _ref.children,
+      language = _ref.language;
   return /*#__PURE__*/React__default['default'].createElement(Highlight, _extends({}, defaultProps, {
     theme: theme$1,
     code: children,
-    language: "jsx"
+    language: language
   }), function (_ref2) {
     var className = _ref2.className,
         style = _ref2.style,
@@ -3774,7 +3775,11 @@ var CodeBlock = function CodeBlock(_ref) {
 };
 
 CodeBlock.propTypes = {
-  children: PropTypes__default['default'].string
+  children: PropTypes__default['default'].string,
+  language: PropTypes__default['default'].string
+};
+CodeBlock.defaultProps = {
+  language: 'jsx'
 };
 
 var Space = function Space(_ref) {
